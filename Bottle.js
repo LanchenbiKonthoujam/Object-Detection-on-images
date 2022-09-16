@@ -1,8 +1,8 @@
 status = "";
-AC_image = "";
+Bottle_image = "";
 
 function preload(){
-    AC_image = loadImage("https://etimg.etb2bimg.com/photo/91281310.cms")
+    AC_image = loadImage("https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2F0ZXIlMjBib3R0bGV8ZW58MHx8MHx8&w=1000&q=80")
 }
 
 function setup(){
@@ -15,7 +15,7 @@ function setup(){
 function modelLoaded(){
     console.log("Model Loaded!");
     Status = true;
-    object_detector.Detect(AC_image, gotResults);
+    object_detector.Detect(Bottle_image, gotResults);
 }
 
 function gotResults(results, error){
@@ -27,5 +27,5 @@ function gotResults(results, error){
 }
 
 function draw(){
-    image(AC_image,0,0,640,350);
+    image(Bottle_image,0,0,640,350);
 }
